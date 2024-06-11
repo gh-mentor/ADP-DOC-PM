@@ -30,12 +30,8 @@ namespace PR_WebApp
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseRouting();
-
-            app.UseAuthorization();
-
             app.MapControllerRoute(
-                name: "default",
+                name: "main",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
