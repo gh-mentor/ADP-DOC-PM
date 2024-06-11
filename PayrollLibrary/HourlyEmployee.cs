@@ -5,6 +5,17 @@
         private double _HourlyRate;
         private double _HoursWorked;
 
+        /// <summary>
+        /// Gets or sets the hourly rate for the employee.
+        /// </summary>
+        /// <exception cref="ArgumentException">Thrown when the hourly rate is negative.</exception>
+        /// <value>The hourly rate.</value>
+        /// <example>
+        /// <code>
+        /// var employee = new HourlyEmployee();
+        /// employee.HourlyRate = 10;
+        /// </code>
+        /// </example>
         public double HourlyRate
         {
             get { return _HourlyRate; }
@@ -18,6 +29,10 @@
             }
         }
 
+        /// <summary>
+        /// Gets or sets the number of hours worked by the employee.
+        /// </summary>
+        /// <exception cref="ArgumentException">Thrown when the hours worked is negative.</exception>
         public double HoursWorked
         {
             get { return _HoursWorked; }
@@ -44,6 +59,9 @@
         public override double Payment { get { return _HourlyRate * _HoursWorked; } }
 
         // override the EmployeeDetails property
+        /// <summary>
+        /// Gets the details of the hourly employee, including the base employee details, hourly rate, and hours worked.
+        /// </summary>
         public override string EmployeeDetails
         {
             get

@@ -60,6 +60,9 @@
 
         public abstract double Payment { get; }
 
+        /// <summary>
+        /// Gets the details of the employee.
+        /// </summary>
         public virtual string EmployeeDetails
         {
             get { return $"Id: {_Id}, Name: {_Name}, Email: {_Email}, Mobile: {_Mobile}, DepartmentId: {_DepartmentId}"; }
